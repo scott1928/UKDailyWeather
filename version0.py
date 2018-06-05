@@ -28,9 +28,6 @@ def uk_high_temp():
 	print("The hottest city in the uk is "+str(hottest_city)+" with a temperature of "+ str(max_temp))
 	return [hottest_city,max_temp]
 
-
-##print(uk_high_temp())
-
 def world_temps():
 	i = 0
 	uk_temp_run = uk_high_temp()
