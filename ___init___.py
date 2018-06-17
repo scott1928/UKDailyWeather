@@ -2,6 +2,7 @@ from twython import Twython
 import random
 import version0
 import os
+import image_picker
 
 from auth import (
     consumer_key,
@@ -17,10 +18,7 @@ twitter = Twython(
 )
 
 
-imgdir = '/Users/scottkirwan/Documents/api/pics/'
-print(imgdir)
-imgfile = random.choice(os.listdir(imgdir))
-print(imgfile)
+imgfile = image_picker.img_pick()
 message = version0.headline_generator() 
 photo = open('/Users/scottkirwan/Documents/api/pics/'+str(imgfile),'rb')
 response = twitter.upload_media(media=photo)

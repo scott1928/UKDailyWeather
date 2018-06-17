@@ -2,5 +2,8 @@ auth.py
 config.py
 auth.pyc
 config.pyc
-tweeps
+tweepy/
 twitter-follow-bot
+pi/
+pics/
+*.pyc
