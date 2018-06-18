@@ -2,7 +2,7 @@ import random
 import os
 used = open("used_words.txt","r")
 lines = used.readlines()
-print("length of file is : ",len(lines))
+#print("length of file is : ",len(lines))
 
 def dupe(imgf):
 	used = open("used_words.txt","r")
@@ -22,11 +22,11 @@ def img_pick():
 	global lines
 	imgdir = '/Users/scottkirwan/Documents/api/pics/'
 	number_files = os.listdir(imgdir)
-	print len(number_files)
+#	print len(number_files)
 	imgfile = random.choice(os.listdir(imgdir))
-	print(imgfile)
+#	print(imgfile)
 	dupe_img = dupe(imgfile)
-	print(dupe_img)
+#	print(dupe_img)
 	while True:
 		if (dupe_img == False):
 			if len(lines) >= len(number_files):
@@ -37,7 +37,7 @@ def img_pick():
 			used.write("\n")
 			return imgfile
 		else:
-			print("IMAGE USED ALREADY, REPICKING")
+#			print("IMAGE USED ALREADY, REPICKING")
 			imgfile = random.choice(os.listdir(imgdir))
 			while dupe_img == True:
 				imgfile = random.choice(os.listdir(imgdir))
