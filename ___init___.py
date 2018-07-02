@@ -38,7 +38,7 @@ internet = have_internet()
 print("Internet online")
 
 while internet == False:
-	print("internet offline at " + time.strftime("%H:%M,%S"))
+	print("Internet is offline at " + time.strftime("%H:%M,%S"))
 	time.sleep(1200)
 	internet = have_internet()
 
