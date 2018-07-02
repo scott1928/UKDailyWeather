@@ -2,6 +2,7 @@ import random
 import os
 used = open("used_words.txt","r")
 lines = used.readlines()
+import config
 #print("length of file is : ",len(lines))
 
 def dupe(imgf):
@@ -20,7 +21,7 @@ def dupe(imgf):
 def img_pick():
 	global used
 	global lines
-	imgdir = '/Users/scottkirwan/Documents/api/pics/'
+	imgdir = config.folder
 	number_files = os.listdir(imgdir)
 #	print len(number_files)
 	imgfile = random.choice(os.listdir(imgdir))
