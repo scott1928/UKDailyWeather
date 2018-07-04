@@ -54,7 +54,7 @@ def world_temps():
 
 
 word_gen = [["Great Britain ","Britain ","The UK ","The British Isles ","The United Kingdom "] #0
-,["SWEATS ", "is MELTING ", "BOILS ", "SWELTERS ", "IS BLAZING ", "SCORCHES ","SIZZLES ","BAKES ","IS TROPICAL ","IS RED HOT ","IS HOT AS HELL "] #1
+,["SWEATS ", "is MELTING ", "BOILS ", "SWELTERS ", "IS BLAZING ", "SCORCHES ","SIZZLES ","BAKES ","IS TROPICAL ","IS RED HOT ","IS HOTTER THAN HELL ","Gets out the suncream "] #1
 ,["in the sun as the temperature ", "as the sun shines down and it ", "as the mercury ","as the sun's rays beat down and it ","as clouds clear and it "] #2
 ,["climbs HIGHER than ","raises ABOVE ", "INCREASES to ", "BREAKS through to "] #3
 ,["making us HOTTER than ", "BEATING even ", "causing us to SWEAT more than ", "putting us on course to be WARMER than "] #4
