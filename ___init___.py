@@ -36,13 +36,14 @@ def have_internet():
 
 
 internet = have_internet()
-print("Internet online")
+
 
 while internet == False:
 	print("Internet is offline at " + time.strftime("%H:%M,%S"))
 	time.sleep(1200)
 	internet = have_internet()
 
+print("Internet online and script ran at: " + time.strftime("%H:%M,%S"))
 imgfile = image_picker.img_pick()
 message = version0.headline_generator() 
 photo = open(config.folder+str(imgfile),'rb')
