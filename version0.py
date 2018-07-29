@@ -8,10 +8,7 @@ world_citys = {'Vienna': '48.2082,16.3738', 'New York': '40.7128,-74.0060', 'BAR
 'Beijing': '39.9075,116.39723', 'Belgrade': '44.80401,20.46513', 'Berlin': '52.52437,13.41053', 'Budapest': '47.49801,19.03991', 'Buenos Aires': '-34.61315,-58.37723', 'Cairo': '30.06263,31.24967', 'CARACAS': '10.5,-66.91667', 'Copenhagen': '55.67594,12.56553', 'DAMASCUS': '33.5102,36.29128', 'Dhaka': '23.7104,90.40744', 'Gibralta': '36.14474,-5.35257',
 'GUATAMALA': '14.64072,-90.51327', 'Havana': '23.13302,-82.38304', 'Hong Kong': '22.28552,114.15769', 'JAKARATA': '-6.21462,106.84513', 'KABUL': '34.52813,69.17233', 'Kathmandu': '27.70169,85.3206', 'Kiev': '50.45466,30.5238', 'Kuala Lumper': '3.1412,101.68653', 'KUWAIT': '29.36972,47.97833', 'Lisbon': '38.71667,-9.13333', 'MADRID': '40.4165,-3.70256', 
 'Manila': '14.6042,120.9822', 'Monaco': '43.73333,7.41667', 'NAIROBI': '-1.28333,36.81667', 'New Delhi': '28.63576,77.22445', 'Singapore': '1.28967,103.85007', 'TOKYO': '35.61488,139.5813', 'Zagreb': '45.81444,15.97798'}
-##city_list = [',,,,,,,,,,,,,,,,,
-##,,,,'Budapest','Buenos Aires','Cairo','CARACAS','Copenhagen','DAMASCUS','Dhaka','Gibralta','GUATAMALA','Havana','Hong Kong','JAKARATA','KABUL','Kathmandu','Kiev','Kuala Lumper','KUWAIT','Lisbon',
-##'MADRID','Manila','Monaco','NAIROBI','New Delhi','Singapore','TOKYO','Zagreb']
-##uk_city_list = ['Brighton','London','Liverpool','Edinburgh','Leicester','Plymouth']
+
 
 uk_city_list = {'Brighton': '50.8225,0.1372', 'London': '51.5074,0.1278', 'Liverpool': '53.41058,-2.97794', 'Edinburgh': '55.9533,3.1883', 'Leicester': '52.6369,1.1398', 'Plymouth': '50.3755,-4.1427', 'Porthmadog': '52.9278,-4.1334',
  'Aberdeen': '57.14369,-2.09814', 'Belfast': '54.58333,-5.93333', 'Bexley': '51.44162,0.14866', 'Birmingham': '52.48142,-1.89983', 'Blackpool': '53.81667,-3.05', 'Bolton': '53.58333,-2.43333', 'Bournmouth': '50.72048,-1.8795',
