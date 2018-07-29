@@ -1,6 +1,7 @@
 import config
 import requests
 import random
+import trending
 
 ##city_list = ['Vienna','New York','BARCELONA','Rio De Janeiro','Bangkok','Sydney','Dubrovnik','Cape Town','Los Angeles','Orlando','Mexico City','Athens','Istanbul','Tel Aviv','Moscow','ABU DHABI','Amsterdam','Ankara','BAGHDAD',
 ##'BAKU','Beijing','Belgrade','Berlin','Budapest','Buenos Aires','Cairo','CARACAS','Copenhagen','DAMASCUS','Dhaka','Gibralta','GUATAMALA','Havana','Hong Kong','JAKARATA','KABUL','Kathmandu','Kiev','Kuala Lumper','KUWAIT','Lisbon',
@@ -72,11 +73,11 @@ def word_generator():
 
 
 def headline_generator():
+	trends = trending.get_trends()
 	index = word_generator()
 	uk_temp = uk_high_temp()
 	world_temps_gen = world_temps()
-	return (word_gen[0][index[0]]) + word_gen[1][index[1]] + word_gen[2][index[2]] + word_gen[3][index[3]] + str(uk_temp[1]) + str(" degrees ") + word_gen[4][index[4]] + str(world_temps_gen[0]) + word_gen[5][index[5]] + str(world_temps_gen[1]) + " degrees while " + word_gen[6][index[6]] + word_gen[7][index[7]] + " #dailyweather #UKweather #hot #uk #dailyexpress #dailymail"
-
+	return (word_gen[0][index[0]]) + word_gen[1][index[1]] + word_gen[2][index[2]] + word_gen[3][index[3]] + str(uk_temp[1]) + str(" degrees ") + word_gen[4][index[4]] + str(world_temps_gen[0]) + word_gen[5][index[5]] + str(world_temps_gen[1]) + " degrees while " + word_gen[6][index[6]] + word_gen[7][index[7]] + " #dailyweather #UKweather #hot #uk #dailyexpress #dailymail " + trends
 
 
 
