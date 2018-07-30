@@ -83,7 +83,7 @@ def headline_generator():
 	index = word_generator()
 	uk_temp = uk_city_checker()
 	world_temps_gen = world_temps(uk_temp)
-	return (word_gen[0][index[0]]) + word_gen[1][index[1]] + word_gen[2][index[2]] + word_gen[3][index[3]] + str(uk_temp[1]) + str(" degrees ") + word_gen[4][index[4]] + str(world_temps_gen[0]) + word_gen[5][index[5]] + str(world_temps_gen[1]) + " degrees while " + word_gen[6][index[6]] + word_gen[7][index[7]] + " #dailyweather #UKweather #hot #uk #dailyexpress #dailymail " + trends
+	return (word_gen[0][index[0]]) + word_gen[1][index[1]] + word_gen[2][index[2]] + word_gen[3][index[3]] + str(uk_temp[1]) + str(" degrees ") + word_gen[4][index[4]] + str(world_temps_gen[0]) + word_gen[5][index[5]] + str(world_temps_gen[1]) + " degrees while " + word_gen[6][index[6]] + word_gen[7][index[7]] + " #dailyweather #UKweather #uk #weather #dailymail " + trends
 
 
 

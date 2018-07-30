@@ -31,7 +31,7 @@ def get_trends():
     trending_string = ""
     count = 0
     for item in trends:
-        if count < 5:
+        if count < 3:
             trending_string = trending_string + str(item) + " "
             count = count + 1
         else:
