@@ -39,12 +39,17 @@ def img_pick():
 			return imgfile
 		else:
 #			print("IMAGE USED ALREADY, REPICKING")
+			dupe_count = 0
 			imgfile = random.choice(os.listdir(imgdir))
 			while dupe_img == True:
 				imgfile = random.choice(os.listdir(imgdir))
 				dupe_img = dupe(imgfile)
-				if len(lines) >= len(number_files)-1:
+				dupe_count = dupe_count + 1
+				lines = used.readlines()
+				if dupe_count > len(number_files)-1:
 					used = open("used_words.txt","w")
 					used.write("")
+					dupe_img = dupe(imgfile)
+					
 
 

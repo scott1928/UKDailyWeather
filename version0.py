@@ -40,7 +40,7 @@ def world_temps(uk_temps):
 		response = requests.get('https://api.darksky.net/forecast/'+ config.key+'/'+world_citys[city]+'?exclude=minutely,hourly,alerts,flags&units=si')
 		print('This is the temp for ', city)
 		data = response.json()
-		current_temp = data['currently']['temperature']
+		current_temp = data['currently']['temperature'] #not currently used
 		daily = data['daily']['data']
 		daily_high = daily[0]['temperatureHigh']
 		daily_high_round = int(round(daily_high,0))
