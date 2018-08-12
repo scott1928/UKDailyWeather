@@ -5,6 +5,7 @@ import time
 import config
 import tweepy
 
+
 from auth import (
     consumer_key,
     consumer_secret,
@@ -31,10 +32,13 @@ def get_trends():
     trending_string = ""
     count = 0
     for item in trends:
-        if count < 3:
+        if count < 2:
             if str(item[0]) == '#':
                 trending_string = trending_string + str(item) + " "
                 count = count + 1
         else:
             break
     return trending_string
+
+
+

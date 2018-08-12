@@ -2,6 +2,8 @@ import config
 import requests
 import random
 import trending
+import calendar
+import datetime
 
 world_citys = {'Vienna': '48.2082,16.3738', 'New York': '40.7128,-74.0060', 'BARCELONA': '41.390205,2.154007', 'Rio De Janeiro': '-22.9068,-43.1729', 'Bangkok': '13.736717,100.523186', 'Sydney': '-33.865143,151.209900', 'Dubrovnik': '42.6507,18.0944', 'Cape Town': '-33.9249,18.4241', 'Los Angeles': '34.052235,-118.243683', 'Orlando': '28.538336,-81.379234', 
 'Mexico City': '19.432608,-99.133209', 'Athens': '37.983810,23.727539', 'Istanbul': '41.015137,28.979530', 'Tel Aviv': '32.109333,34.855499', 'Moscow': '55.751244,37.618423', 'ABUDHABI': '24.46667,54.36667', 'Amsterdam': '52.37403,4.88969', 'Ankara': '39.91987,32.85427', 'BAGHDAD': '33.34058,44.40088', 'BAKU': '40.37767,49.89201', 
@@ -77,16 +79,44 @@ def word_generator():
 		index_list[7] = random.randint(0,len(word_gen[7])-1) 
 	return index_list
 
+def weekday_hashtag():
+	current_day = datetime.date.today()
+	day_number = current_day.weekday()
+	day_name = calendar.day_name[day_number]
+	current_time = datetime.datetime.now()
+	print(calendar.day_name[day_number])
+	print(current_time.hour)
+	if day_number == 0:
+		hash_word = "#MondayMotivation "
+	if day_number == 1:
+		hash_word = "#TuesdayThoughts "
+	if day_number == 2:
+		hash_word = "#WednesdayWisdom "
+	if day_number == 3:
+		hash_word = "#ThrowbackThursday "
+	if day_number == 4:
+		hash_word = "#FollowFriday "
+	if day_number == 5:
+		hash_word = "#SaturdayShowcase "
+	if day_number == 6:
+		hash_word = "#SundayFunday "
+	if current_time.hour < 12:
+		return  hash_word + "#" + day_name + "Morning"
+	else:
+		return hash_word + "#" + day_name + "Evening"
+
 
 def headline_generator():
 	trends = trending.get_trends()
 	index = word_generator()
 	uk_temp = uk_city_checker()
 	world_temps_gen = world_temps(uk_temp)
-	headline = (word_gen[0][index[0]]) + word_gen[1][index[1]] + word_gen[2][index[2]] + word_gen[3][index[3]] + str(uk_temp[1]) + str(" degrees ") + word_gen[4][index[4]] + str(world_temps_gen[0]) + word_gen[5][index[5]] + str(world_temps_gen[1]) + " degrees while " + word_gen[6][index[6]] + word_gen[7][index[7]] + " #dailyweather #UKweather #uk #weather #dailymail " + trends
+	weekday_hash = weekday_hashtag()
+	headline = (word_gen[0][index[0]]) + word_gen[1][index[1]] + word_gen[2][index[2]] + word_gen[3][index[3]] + str(uk_temp[1]) + str(" degrees ") + word_gen[4][index[4]] + str(world_temps_gen[0]) + word_gen[5][index[5]] + str(world_temps_gen[1]) + " degrees while " + word_gen[6][index[6]] + word_gen[7][index[7]] + " #dailyweather #uk #weather #dailymail " + trends + weekday_hash
 	if len(headline) > 279:
-		headline = (word_gen[0][index[0]]) + word_gen[1][index[1]] + word_gen[2][index[2]] + word_gen[3][index[3]] + str(uk_temp[1]) + str(" degrees ") + word_gen[4][index[4]] + str(world_temps_gen[0]) + word_gen[5][index[5]] + str(world_temps_gen[1]) + " degrees while " + word_gen[6][index[6]] + word_gen[7][index[7]] + " #dailyweather #UKweather #uk #weather #dailymail "
+		headline = (word_gen[0][index[0]]) + word_gen[1][index[1]] + word_gen[2][index[2]] + word_gen[3][index[3]] + str(uk_temp[1]) + str(" degrees ") + word_gen[4][index[4]] + str(world_temps_gen[0]) + word_gen[5][index[5]] + str(world_temps_gen[1]) + " degrees while " + word_gen[6][index[6]] + word_gen[7][index[7]] + " #dailyweather #uk #weather #dailymail " + weekday_hash 
 	return headline
 
 
 
+print(headline_generator())
