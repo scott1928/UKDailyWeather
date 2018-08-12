@@ -32,9 +32,9 @@ def get_trends():
     count = 0
     for item in trends:
         if count < 3:
-            trending_string = trending_string + str(item) + " "
-            count = count + 1
+            if str(item[0]) == '#':
+                trending_string = trending_string + str(item) + " "
+                count = count + 1
         else:
             break
     return trending_string
-
