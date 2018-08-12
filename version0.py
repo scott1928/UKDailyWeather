@@ -118,5 +118,3 @@ def headline_generator():
 	return headline
 
 
-
-print(headline_generator())
