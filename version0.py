@@ -84,8 +84,6 @@ def weekday_hashtag():
 	day_number = current_day.weekday()
 	day_name = calendar.day_name[day_number]
 	current_time = datetime.datetime.now()
-	print(calendar.day_name[day_number])
-	print(current_time.hour)
 	if day_number == 0:
 		hash_word = "#MondayMotivation "
 	if day_number == 1:
